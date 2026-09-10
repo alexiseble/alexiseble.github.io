@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乐园之扉-探索幻想乐园与异世界入口指南</title>
+    <meta name="description" content="乐园之扉是通往幻想世界与异次元乐园的入口合集。了解乐园之扉的设定、世界观、相关作品、游戏与动漫推荐，以及如何开启属于你的冒险之门。">
+    <meta name="keywords" content="乐园之扉,幻想乐园,异世界入口,奇幻世界,冒险之门,乐园设定,世界观">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+            background: linear-gradient(145deg, #0b0d1a 0%, #141a33 45%, #1a1f3a 100%);
+            color: #e8e6f0;
+            line-height: 1.75;
+            overflow-x: hidden;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== Header ===== */
+        .site-header {
+            padding: 28px 0 20px;
+            border-bottom: 1px solid rgba(255, 215, 180, 0.15);
+            background: rgba(10, 12, 28, 0.65);
+            backdrop-filter: blur(6px);
+            position: relative;
+            z-index: 10;
+        }
+        .header-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .brand-logo {
+            width: 52px;
+            height: 52px;
+            background: radial-gradient(circle at 30% 25%, #f9d99a, #c9783f);
+            border-radius: 50%;
+            box-shadow: 0 0 22px rgba(230, 180, 90, 0.45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: #1d1024;
+        }
+        .brand-text h1 {
+            font-size: 1.9rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #f5e2b2, #eab983);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 20px rgba(255, 200, 100, 0.15);
+            margin-bottom: 2px;
+        }
+        .brand-text p {
+            font-size: 0.85rem;
+            color: #9a9fc7;
+            letter-spacing: 1px;
+        }
+        .header-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .header-nav a {
+            color: #c6c9e8;
+            transition: 0.3s;
+            position: relative;
+            padding: 4px 0;
+        }
+        .header-nav a:hover {
+            color: #f3d29b;
+        }
+        .header-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #e6b27a;
+            transition: 0.3s;
+        }
+        .header-nav a:hover::after {
+            width: 100%;
+        }
+
+        /* ===== Hero ===== */
+        .hero {
+            padding: 90px 0 70px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(210, 160, 80, 0.12) 0%, transparent 70%);
+            top: -180px;
+            right: -160px;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .hero-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 50px;
+        }
+        .hero-text {
+            flex: 1 1 440px;
+        }
+        .hero-text .tagline {
+            display: inline-block;
+            background: rgba(230, 180, 120, 0.15);
+            border-left: 3px solid #e0b184;
+            padding: 6px 18px;
+            border-radius: 0 20px 20px 0;
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            color: #eacf9f;
+            margin-bottom: 24px;
+        }
+        .hero-text h2 {
+            font-size: 2.7rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin-bottom: 20px;
+            color: #f0ecdc;
+        }
+        .hero-text h2 span {
+            background: linear-gradient(120deg, #f7d98c, #d99e5a);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .hero-text p {
+            font-size: 1.12rem;
+            color: #b9bbdd;
+            max-width: 580px;
+            margin-bottom: 36px;
+        }
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 36px;
+            border-radius: 40px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+            cursor: pointer;
+            background: none;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #d9a05f, #b5732b);
+            color: #1a1020;
+            box-shadow: 0 8px 22px rgba(190, 130, 60, 0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(190, 130, 60, 0.4);
+        }
+        .btn-outline {
+            border-color: rgba(230, 190, 130, 0.5);
+            color: #e2cda2;
+        }
+        .btn-outline:hover {
+            background: rgba(230, 180, 120, 0.1);
+            border-color: #e6b27a;
+            transform: translateY(-2px);
+        }
+        .hero-visual {
+            flex: 1 1 300px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        .gate-circle {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 40% 40%, #2b3157, #11142b);
+            border: 2px solid rgba(230, 180, 120, 0.25);
+            box-shadow: 0 0 60px rgba(200, 150, 80, 0.2), inset 0 0 70px rgba(0,0,0,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .gate-circle::before {
+            content: '';
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 1px dashed rgba(240, 200, 130, 0.3);
+            animation: spin 30s linear infinite;
+        }
+        .gate-circle::after {
+            content: '✦';
+            font-size: 90px;
+            color: rgba(240, 210, 150, 0.8);
+            text-shadow: 0 0 30px #c78d4a;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* ===== Section ===== */
+        .section {
+            padding: 70px 0;
+        }
+        .section-alt {
+            background: rgba(255, 255, 255, 0.02);
+            border-top: 1px solid rgba(200, 180, 140, 0.08);
+            border-bottom: 1px solid rgba(200, 180, 140, 0.08);
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+        .section-title h3 {
+            font-size: 2.1rem;
+            color: #ece6d4;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        .section-title .line {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #c98d4b, #f0d092);
+            margin: 16px auto 12px;
+            border-radius: 4px;
+        }
+        .section-title p {
+            color: #9a9cb8;
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1rem;
+        }
+
+        /* ===== 世界观 ===== */
+        .lore-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .lore-card {
+            background: rgba(20, 23, 48, 0.6);
+            border: 1px solid rgba(200, 170, 120, 0.12);
+            border-radius: 18px;
+            padding: 34px 26px;
+            transition: 0.3s;
+            backdrop-filter: blur(4px);
+        }
+        .lore-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(230, 180, 120, 0.4);
+            box-shadow: 0 16px 35px rgba(0,0,0,0.5);
+        }
+        .lore-icon {
+            font-size: 2.5rem;
+            margin-bottom: 18px;
+            display: block;
+        }
+        .lore-card h4 {
+            font-size: 1.3rem;
+            color: #ecd7ac;
+            margin-bottom: 12px;
+        }
+        .lore-card p {
+            color: #b3b5d3;
+            font-size: 0.95rem;
+        }
+
+        /* ===== 作品推荐 ===== */
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 26px;
+        }
+        .work-item {
+            background: rgba(15, 18, 40, 0.7);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(200, 170, 120, 0.1);
+            transition: 0.3s;
+        }
+        .work-item:hover {
+            transform: scale(1.02);
+            border-color: rgba(230, 180, 120, 0.4);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+        }
+        .work-cover {
+            height: 140px;
+            background: linear-gradient(145deg, #1a2044, #2c2f55);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .work-info {
+            padding: 20px 18px 24px;
+        }
+        .work-info h5 {
+            font-size: 1.1rem;
+            color: #ecdcba;
+            margin-bottom: 6px;
+        }
+        .work-info .tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            background: rgba(200, 150, 80, 0.2);
+            color: #d9b982;
+            padding: 2px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+        .work-info p {
+            color: #9fa1c0;
+            font-size: 0.88rem;
+        }
+
+        /* ===== 探索之路 ===== */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 26px;
+            counter-reset: step;
+        }
+        .step-item {
+            background: rgba(22, 24, 50, 0.6);
+            border-radius: 18px;
+            padding: 30px 22px;
+            border: 1px solid rgba(200,170,120,0.08);
+            text-align: center;
+            position: relative;
+            transition: 0.3s;
+        }
+        .step-item:hover {
+            background: rgba(30, 32, 60, 0.8);
+        }
+        .step-num {
+            font-size: 2rem;
+            color: rgba(220, 170, 100, 0.4);
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .step-item h5 {
+            color: #e6d3ae;
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+        }
+        .step-item p {
+            color: #9a9cbd;
+            font-size: 0.88rem;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-wrap {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: rgba(18, 21, 45, 0.7);
+            border: 1px solid rgba(200,170,120,0.1);
+            border-radius: 14px;
+            padding: 22px 28px;
+            margin-bottom: 16px;
+            transition: 0.2s;
+        }
+        .faq-item:hover {
+            border-color: rgba(230, 180, 120, 0.3);
+        }
+        .faq-q {
+            font-weight: 600;
+            color: #ead6ac;
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .faq-q::before {
+            content: '❖';
+            color: #c98d4b;
+            font-size: 0.9rem;
+        }
+        .faq-a {
+            color: #a4a6c8;
+            padding-left: 24px;
+            font-size: 0.95rem;
+            border-left: 1px solid rgba(200,150,80,0.2);
+            margin-top: 6px;
+        }
+
+        /* ===== 页脚 ===== */
+        .site-footer {
+            background: rgba(8, 10, 22, 0.8);
+            border-top: 1px solid rgba(200,170,120,0.1);
+            padding: 40px 0 30px;
+            margin-top: 30px;
+        }
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+        .footer-brand {
+            font-size: 1.2rem;
+            color: #d9cba7;
+        }
+        .footer-brand span {
+            color: #b0884d;
+        }
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            color: #8184a5;
+            font-size: 0.85rem;
+        }
+        .footer-links a:hover {
+            color: #c9b07d;
+        }
+        .copyright {
+            width: 100%;
+            text-align: center;
+            color: #5f6180;
+            font-size: 0.8rem;
+            margin-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.03);
+            padding-top: 18px;
+        }
+
+        /* ===== 响应式 ===== */
+        @media (max-width: 768px) {
+            .header-wrap {
+                flex-direction: column;
+                gap: 14px;
+            }
+            .brand {
+                justify-content: center;
+            }
+            .header-nav {
+                justify-content: center;
+                gap: 18px;
+                font-size: 0.9rem;
+            }
+            .hero {
+                padding: 50px 0;
+            }
+            .hero-text h2 {
+                font-size: 2rem;
+            }
+            .hero-visual {
+                margin-top: 20px;
+            }
+            .gate-circle {
+                width: 220px;
+                height: 220px;
+            }
+            .section {
+                padding: 45px 0;
+            }
+            .section-title h3 {
+                font-size: 1.7rem;
+            }
+            .footer-links {
+                flex-wrap: wrap;
+                gap: 12px 18px;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+            .hero-text h2 {
+                font-size: 1.7rem;
+            }
+            .brand-text h1 {
+                font-size: 1.5rem;
+            }
+            .btn {
+                padding: 10px 24px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+    <!-- 页眉 -->
+    <header class="site-header">
+        <div class="container header-wrap">
+            <div class="brand">
+                <div class="brand-logo">✦</div>
+                <div class="brand-text">
+                    <h1>乐园之扉</h1>
+                    <p>GARDEN OF PARADISE GATE</p>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <a href="#world">世界观</a>
+                <a href="#works">作品</a>
+                <a href="#explore">探索路径</a>
+                <a href="#faq">常见问题</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 首屏 Hero -->
+        <section class="hero">
+            <div class="container hero-wrap">
+                <div class="hero-text">
+                    <div class="tagline">✦ 异世界幻想 · 入口全解析</div>
+                    <h2>推开<span>乐园之扉</span><br>进入你的幻想次元</h2>
+                    <p>乐园之扉，一个连接现实与幻想世界的概念集合。无论是游戏中的神秘入口、动漫里的异世界通道，还是文学中描绘的乌托邦之门——这里提供全面的设定解释、作品推荐与冒险指南。</p>
+                    <div class="hero-cta">
+                        <a href="#world" class="btn btn-primary">开始探索</a>
+                        <a href="#works" class="btn btn-outline">浏览作品</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="gate-circle"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 世界观介绍 -->
+        <section class="section" id="world">
+            <div class="container">
+                <div class="section-title">
+                    <h3>乐园之扉 · 核心概念</h3>
+                    <div class="line"></div>
+                    <p>理解乐园之扉在不同语境下的含义与魅力</p>
+                </div>
+                <div class="lore-grid">
+                    <div class="lore-card">
+                        <span class="lore-icon">🗝️</span>
+                        <h4>入口与试炼</h4>
+                        <p>在众多虚构设定中，乐园之扉并非轻易开启。它往往需要特殊条件——钥匙、咒语、资格或某种牺牲。这种设定为故事增添了神秘感与挑战性，也让“推开那扇门”成为角色成长的关键节点。</p>
+                    </div>
+                    <div class="lore-card">
+                        <span class="lore-icon">🌌</span>
+                        <h4>异世界的通道</h4>
+                        <p>乐园之扉常被描绘为连接现实世界与异次元的桥梁。穿过这扇门，主角将面对完全不同的物理法则、文明体系和生存挑战。它象征着未知的冒险与自我边界的拓展。</p>
+                    </div>
+                    <div class="lore-card">
+                        <span class="lore-icon">🏰</span>
+                        <h4>理想乡的隐喻</h4>
+                        <p>从文学角度解读，乐园之扉可以代表人类对理想社会的追求。它可能指向一个没有纷争的乌托邦，也可能是一个需要付出代价才能维持的梦幻之地。这种双重性让乐园之扉充满思辨色彩。</p>
+                    </div>
+                    <div class="lore-card">
+                        <span class="lore-icon">🎮</span>
+                        <h4>游戏机制中的定位</h4>
+                        <p>在角色扮演与冒险类游戏中，乐园之扉通常作为重要地标存在。它可能是副本入口、剧情转折点，或是玩家最终挑战的舞台。游戏设计者常通过这扇门来划分区域、控制节奏并激发探索欲。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 相关作品推荐 -->
+        <section class="section section-alt" id="works">
+            <div class="container">
+                <div class="section-title">
+                    <h3>相关作品 · 灵感巡礼</h3>
+                    <div class="line"></div>
+                    <p>从动漫、游戏到文学，寻找那些以乐园之门为舞台的经典</p>
+                </div>
+                <div class="works-grid">
+                    <div class="work-item">
+                        <div class="work-cover">⚔️</div>
+                        <div class="work-info">
+                            <h5>异世界冒险类</h5>
+                            <span class="tag">动漫 · 轻小说</span>
+                            <p>主角意外获得通往异世界的资格，在乐园之扉的引导下展开冒险。此类作品往往强调成长与羁绊，门后的世界充满魔法与未知种族。</p>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-cover">🕹️</div>
+                        <div class="work-info">
+                            <h5>开放世界游戏</h5>
+                            <span class="tag">游戏</span>
+                            <p>许多RPG将乐园之扉作为隐藏区域或后期探索目标。玩家需要集齐关键道具、完成前置任务才能开启，门后常藏着稀有装备与强力BOSS。</p>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-cover">📖</div>
+                        <div class="work-info">
+                            <h5>奇幻文学经典</h5>
+                            <span class="tag">小说</span>
+                            <p>文学中的乐园之扉往往具有象征意义，代表主角内心世界的突破或社会阶层的变化。从古典神话到现代奇幻，这类意象反复出现。</p>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-cover">🎬</div>
+                        <div class="work-info">
+                            <h5>影视剧集</h5>
+                            <span class="tag">影视</span>
+                            <p>影视作品中的乐园之扉常以视觉奇观呈现，伴随光影特效与音乐烘托。门的另一侧可能是平行世界、梦境空间或遥远未来。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 探索路径 -->
+        <section class="section" id="explore">
+            <div class="container">
+                <div class="section-title">
+                    <h3>如何开启你的乐园之门</h3>
+                    <div class="line"></div>
+                    <p>无论你是创作者还是爱好者，都可以找到接近乐园之扉的方式</p>
+                </div>
+                <div class="steps">
+                    <div class="step-item">
+                        <span class="step-num">01</span>
+                        <h5>定义你的乐园</h5>
+                        <p>先想清楚门后是什么样的世界。是充满魔法的森林，还是科技感十足的赛博都市？乐园的性质决定了故事基调。</p>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-num">02</span>
+                        <h5>设计开启条件</h5>
+                        <p>乐园之扉不会轻易敞开。设置钥匙、谜题或情感触发点，让进入的过程本身就充满戏剧性。</p>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-num">03</span>
+                        <h5>构建世界细节</h5>
+                        <p>一个可信的异世界需要自洽的规则。地理、社会结构、力量体系……细节越丰富，乐园越真实。</p>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-num">04</span>
+                        <h5>寻找同好社区</h5>
+                        <p>在相关的动漫、游戏论坛与社交媒体群组中，分享你的设定或寻找他人创作的乐园之扉，碰撞灵感火花。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section section-alt" id="faq">
+            <div class="container">
+                <div class="section-title">
+                    <h3>常见问题</h3>
+                    <div class="line"></div>
+                    <p>关于乐园之扉，你可能还想了解这些</p>
+                </div>
+                <div class="faq-wrap">
+                    <div class="faq-item">
+                        <div class="faq-q">乐园之扉有什么特定的出处吗？</div>
+                        <div class="faq-a">乐园之扉不是一个单一作品的专有名词，而是一种广泛存在于幻想题材中的母题。它在不同游戏、动漫与文学作品中以相似但各具特色的形式出现，象征着通往理想世界或未知领域的关键入口。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">如何在自己的创作中加入乐园之扉的设定？</div>
+                        <div class="faq-a">建议从“门后是什么”和“为什么要开门”这两个核心问题入手。乐园之扉可以是一个实际地点，也可以是抽象转折点。重要的是让它与角色动机和故事冲突紧密结合，而不是一个无意义的装饰。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">乐园之扉与乌托邦、异世界有什么区别？</div>
+                        <div class="faq-a">乌托邦侧重描绘理想社会的形态；异世界泛指与现实不同的世界。而乐园之扉更强调“进入”这一动作和“门槛”本身的仪式感。它既是通道，也是界限，重点在于跨越前后的对比与转变。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">有哪些游戏明确使用了乐园之扉的概念？</div>
+                        <div class="faq-a">许多日式RPG和开放世界游戏都有类似设定，例如某些作品中名为“乐园之门”的最终迷宫入口，或是需要特定条件解锁的隐藏区域。由于名称相似的作品较多，建议在游戏社区中搜索“乐园之门”或“paradise gate”获取当前热门案例。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">✦ <span>乐园之扉</span> · 幻想入口研究站</div>
+                <div class="footer-links">
+                    <a href="#">设定百科</a>
+                    <a href="#">作品库</a>
+                    <a href="#">同人创作</a>
+                    <a href="#">关于我们</a>
+                </div>
+                <div class="copyright">
+                    © 乐园之扉专题页 · 本页内容基于幻想题材整理与创作，仅供爱好者交流参考
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
