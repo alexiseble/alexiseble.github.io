@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三浦惠理-日本女演员资料与作品介绍</title>
+    <meta name="description" content="三浦惠理，日本知名女演员，了解她的个人资料、演艺经历、代表作品、最新动态及影视资讯，尽在三浦惠理中文资讯站。">
+    <meta name="keywords" content="三浦惠理,三浦惠理资料,三浦惠理作品,日本女演员,日剧,电影,演艺经历">
+    <link rel="stylesheet" href="data:text/css,"> <!-- 占位，实际样式见下方style -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: #f8f5f1;
+            color: #2c2c2c;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* 页眉 */
+        .site-header {
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo-icon {
+            font-size: 28px;
+            color: #b76e79;
+        }
+        .logo-text {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #3a3a3a;
+        }
+        .logo-text span {
+            color: #b76e79;
+        }
+        .main-nav ul {
+            display: flex;
+            gap: 28px;
+        }
+        .main-nav a {
+            font-size: 15px;
+            font-weight: 500;
+            color: #333;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .main-nav a:hover {
+            color: #b76e79;
+            border-bottom-color: #b76e79;
+        }
+        .nav-search {
+            display: flex;
+            align-items: center;
+            background: #f2ece7;
+            border-radius: 30px;
+            padding: 6px 14px;
+            width: 220px;
+        }
+        .nav-search input {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 100%;
+            font-size: 14px;
+            padding: 4px 0;
+        }
+        .nav-search button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            color: #888;
+            font-size: 16px;
+        }
+        /* 主视觉 */
+        .hero-section {
+            background: linear-gradient(135deg, #f3e9e3 0%, #fcf8f5 100%);
+            padding: 50px 0 40px;
+            border-bottom: 1px solid #e8ddd6;
+        }
+        .hero-grid {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .hero-photo {
+            flex: 1 1 300px;
+            max-width: 320px;
+            background: #fff;
+            border-radius: 16px;
+            padding: 16px;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+            text-align: center;
+        }
+        .photo-placeholder {
+            background: linear-gradient(145deg, #d9c3b5, #b78b7d);
+            border-radius: 12px;
+            height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 64px;
+            font-weight: 300;
+            letter-spacing: 8px;
+        }
+        .photo-caption {
+            margin-top: 12px;
+            font-size: 13px;
+            color: #777;
+        }
+        .hero-info {
+            flex: 2 1 500px;
+        }
+        .hero-info h1 {
+            font-size: 38px;
+            font-weight: 700;
+            color: #2c2c2c;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+        .hero-tagline {
+            font-size: 16px;
+            color: #7a6a5f;
+            margin-bottom: 20px;
+            border-left: 4px solid #b76e79;
+            padding-left: 16px;
+            font-style: italic;
+        }
+        .profile-brief {
+            background: rgba(255,255,255,0.7);
+            border-radius: 16px;
+            padding: 20px 24px;
+            backdrop-filter: blur(4px);
+            border: 1px solid #ebe0d9;
+        }
+        .profile-brief ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 32px;
+        }
+        .profile-brief li {
+            font-size: 14px;
+            color: #444;
+        }
+        .profile-brief strong {
+            color: #1f1f1f;
+            font-weight: 600;
+            margin-right: 6px;
+        }
+        /* 栏目通用 */
+        .section {
+            padding: 48px 0;
+        }
+        .section-title {
+            font-size: 26px;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 14px;
+            margin-bottom: 28px;
+            color: #2c2c2c;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: #b76e79;
+            border-radius: 3px;
+        }
+        .section-title-center {
+            text-align: center;
+        }
+        .section-title-center::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        /* 最新动态 */
+        .news-list {
+            background: #fff;
+            border-radius: 18px;
+            padding: 24px 28px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.03);
+        }
+        .news-item {
+            display: flex;
+            gap: 20px;
+            padding: 14px 0;
+            border-bottom: 1px solid #f0ebe6;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-date {
+            color: #b76e79;
+            font-weight: 600;
+            font-size: 14px;
+            min-width: 90px;
+        }
+        .news-content {
+            flex: 1;
+        }
+        .news-content h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .news-content p {
+            font-size: 14px;
+            color: #666;
+        }
+        /* 作品卡片 */
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 24px;
+        }
+        .work-card {
+            background: #fff;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .work-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+        }
+        .work-thumbnail {
+            background: linear-gradient(135deg, #c9a89a, #a87f6f);
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 40px;
+        }
+        .work-thumbnail.tv {
+            background: linear-gradient(135deg, #88a8b8, #5f7f8f);
+        }
+        .work-thumbnail.movie {
+            background: linear-gradient(135deg, #b58a76, #8f6a58);
+        }
+        .work-thumbnail.stage {
+            background: linear-gradient(135deg, #a79ac9, #7f6f9f);
+        }
+        .work-info {
+            padding: 18px 20px 20px;
+        }
+        .work-info h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .work-info .type-tag {
+            display: inline-block;
+            background: #f3e9e3;
+            color: #9a6a5a;
+            font-size: 12px;
+            padding: 2px 10px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+        }
+        .work-info p {
+            font-size: 14px;
+            color: #555;
+        }
+        /* 经历时间线 */
+        .timeline {
+            background: #fff;
+            border-radius: 18px;
+            padding: 32px 28px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+        .timeline-item {
+            display: flex;
+            gap: 24px;
+            padding: 12px 0;
+            border-left: 2px solid #e0d4cc;
+            margin-left: 8px;
+            padding-left: 24px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 22px;
+            width: 12px;
+            height: 12px;
+            background: #b76e79;
+            border-radius: 50%;
+        }
+        .timeline-year {
+            font-weight: 700;
+            color: #b76e79;
+            min-width: 70px;
+            font-size: 16px;
+        }
+        .timeline-desc {
+            color: #444;
+            font-size: 15px;
+        }
+        /* 关于/简介 */
+        .about-section {
+            background: #fff;
+            border-radius: 20px;
+            padding: 36px 32px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+        .about-text p {
+            font-size: 15px;
+            margin-bottom: 16px;
+            color: #3d3d3d;
+            line-height: 1.8;
+        }
+        /* 影迷互动/社区预览 */
+        .fan-community {
+            background: linear-gradient(135deg, #faf4f0, #f3ebe5);
+            border-radius: 24px;
+            padding: 36px 32px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .community-text h3 {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+        .community-text p {
+            color: #5f5f5f;
+            max-width: 500px;
+        }
+        .community-btn {
+            background: #b76e79;
+            color: #fff;
+            border: none;
+            padding: 12px 28px;
+            font-size: 15px;
+            border-radius: 40px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .community-btn:hover {
+            background: #a05a65;
+        }
+        /* FAQ */
+        .faq-box {
+            background: #fff;
+            border-radius: 18px;
+            padding: 12px 24px;
+        }
+        .faq-item {
+            padding: 16px 0;
+            border-bottom: 1px solid #f0ebe6;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .faq-answer {
+            font-size: 15px;
+            color: #555;
+        }
+        /* 页脚 */
+        .site-footer {
+            background: #2d2a27;
+            color: #b8b0aa;
+            padding: 40px 0 20px;
+            margin-top: 30px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin-bottom: 28px;
+        }
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+        .footer-col ul li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .footer-col a:hover {
+            color: #d4b7be;
+        }
+        .copyright {
+            text-align: center;
+            font-size: 13px;
+            border-top: 1px solid #44403c;
+            padding-top: 20px;
+            color: #8a837d;
+        }
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+            .main-nav {
+                order: 3;
+                width: 100%;
+                overflow-x: auto;
+            }
+            .main-nav ul {
+                gap: 16px;
+                padding-bottom: 4px;
+            }
+            .nav-search {
+                width: 100%;
+                order: 2;
+            }
+            .hero-grid {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-photo {
+                max-width: 240px;
+                margin: 0 auto;
+            }
+            .hero-tagline {
+                border-left: none;
+                text-align: center;
+                padding-left: 0;
+            }
+            .profile-brief ul {
+                justify-content: center;
+            }
+            .section {
+                padding: 32px 0;
+            }
+            .section-title {
+                font-size: 22px;
+            }
+            .timeline-item {
+                gap: 12px;
+                padding-left: 16px;
+            }
+            .timeline-year {
+                min-width: 55px;
+            }
+            .news-item {
+                flex-direction: column;
+                gap: 6px;
+            }
+            .news-date {
+                min-width: auto;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 14px;
+            }
+            .works-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-info h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo-area">
+                <span class="logo-icon">✦</span>
+                <span class="logo-text">三浦惠理<span>中文站</span></span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#news">最新动态</a></li>
+                    <li><a href="#works">影视作品</a></li>
+                    <li><a href="#career">演艺经历</a></li>
+                    <li><a href="#about">个人简介</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="nav-search">
+                <input type="text" placeholder="搜索作品或资讯...">
+                <button>🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero 首屏 -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-photo">
+                        <div class="photo-placeholder">惠理</div>
+                        <div class="photo-caption">三浦惠理 公式写真风格示意</div>
+                    </div>
+                    <div class="hero-info">
+                        <h1>三浦惠理</h1>
+                        <p class="hero-tagline">细腻演技 · 温柔力量 · 日本影视界备受瞩目的实力派女演员</p>
+                        <div class="profile-brief">
+                            <ul>
+                                <li><strong>出生地：</strong>日本东京都</li>
+                                <li><strong>职业：</strong>演员 · 模特</li>
+                                <li><strong>活跃年代：</strong>2010年代至今</li>
+                                <li><strong>代表类型：</strong>电视剧 · 电影 · 舞台剧</li>
+                                <li><strong>影迷昵称：</strong>惠理酱</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 最新动态 -->
+        <section class="section" id="news">
+            <div class="container">
+                <h2 class="section-title">最新动态与资讯</h2>
+                <div class="news-list">
+                    <div class="news-item">
+                        <div class="news-date">2025.03.18</div>
+                        <div class="news-content">
+                            <h3>三浦惠理确定出演春季日剧《约定的花》</h3>
+                            <p>将在剧中饰演一位植物学家，与主演合作展开温情故事，预计4月开播。</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date">2025.02.02</div>
+                        <div class="news-content">
+                            <h3>电影《潮汐食堂》公开预告片</h3>
+                            <p>三浦惠理主演的电影《潮汐食堂》公开首支预告，片中她饰演继承海边食堂的年轻老板娘，影片将于初夏上映。</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date">2024.12.10</div>
+                        <div class="news-content">
+                            <h3>荣获第X届戏剧奖最佳女配角提名</h3>
+                            <p>凭借舞台剧《夜光》中的精湛表现，获得戏剧评论家奖提名，最终结果将于今年春季公布。</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date">2024.10.05</div>
+                        <div class="news-content">
+                            <h3>杂志《Cinema Story》封面人物</h3>
+                            <p>三浦惠理登上10月号封面，独家访谈中谈及对角色塑造的理解与未来挑战。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 影视作品 -->
+        <section class="section" id="works">
+            <div class="container">
+                <h2 class="section-title">代表影视作品</h2>
+                <div class="works-grid">
+                    <div class="work-card">
+                        <div class="work-thumbnail tv">📺</div>
+                        <div class="work-info">
+                            <span class="type-tag">电视剧</span>
+                            <h3>约定的花</h3>
+                            <p>2025年春季新剧，饰演植物学家・藤原栞。与自然共生的温柔物语。</p>
+                        </div>
+                    </div>
+                    <div class="work-card">
+                        <div class="work-thumbnail movie">🎬</div>
+                        <div class="work-info">
+                            <span class="type-tag">电影</span>
+                            <h3>潮汐食堂</h3>
+                            <p>主演作品，饰演海边小镇食堂的继承人。2025年初夏上映。</p>
+                        </div>
+                    </div>
+                    <div class="work-card">
+                        <div class="work-thumbnail tv">📺</div>
+                        <div class="work-info">
+                            <span class="type-tag">电视剧</span>
+                            <h3>静默的森林</h3>
+                            <p>2023年播出，饰演调查记者・水泽凛。在悬疑氛围中展现知性魅力。</p>
+                        </div>
+                    </div>
+                    <div class="work-card">
+                        <div class="work-thumbnail movie">🎬</div>
+                        <div class="work-info">
+                            <span class="type-tag">电影</span>
+                            <h3>光之记忆</h3>
+                            <p>2022年电影，饰演失去记忆的钢琴家。细腻演技获多方好评。</p>
+                        </div>
+                    </div>
+                    <div class="work-card">
+                        <div class="work-thumbnail stage">🎭</div>
+                        <div class="work-info">
+                            <span class="type-tag">舞台剧</span>
+                            <h3>夜光</h3>
+                            <p>2024年舞台剧，一人分饰两角，展现角色深度，获评论家提名。</p>
+                        </div>
+                    </div>
+                    <div class="work-card">
+                        <div class="work-thumbnail tv">📺</div>
+                        <div class="work-info">
+                            <span class="type-tag">电视剧</span>
+                            <h3>东京塔之下</h3>
+                            <p>2021年WOWOW日剧，饰演律师・森山结衣。冷静而富有同理心的角色。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 演艺经历 -->
+        <section class="section" id="career">
+            <div class="container">
+                <h2 class="section-title">演艺经历</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2012</div>
+                        <div class="timeline-desc">以模特身份出道，参与时尚杂志拍摄，并逐步接触影视试镜。</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2014</div>
+                        <div class="timeline-desc">出演深夜剧《都市的角落》首次亮相电视荧幕，饰演配角。</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2017</div>
+                        <div class="timeline-desc">主演独立电影《海的女儿》，在横滨电影节获得新人奖。</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2019</div>
+                        <div class="timeline-desc">参演NHK晨间剧《太阳之舞》，知名度大幅提升，获得广泛关注。</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2022</div>
+                        <div class="timeline-desc">主演电影《光之记忆》，演技获得多个影评人协会肯定。</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-desc">挑战舞台剧《夜光》，首次一人分饰两角，拓展表演领域。</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-desc">新作日剧《约定的花》及电影《潮汐食堂》待播，活跃度持续上升。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 个人简介与特色 -->
+        <section class="section" id="about">
+            <div class="container">
+                <h2 class="section-title">关于三浦惠理</h2>
+                <div class="about-section">
+                    <div class="about-text">
+                        <p>三浦惠理（みうら えり），日本女演员，出生于东京都。她以自然细腻的表演风格著称，擅长塑造内心丰富、具有层次感的角色。无论是温柔坚韧的普通女性，还是复杂多面的职业人士，她都能通过眼神与细微动作传递情绪。</p>
+                        <p>除了影视剧，她也活跃于舞台剧领域，不断挑战不同类型的作品。生活中的她喜欢阅读与料理，曾在采访中表示，观察日常细节是塑造角色的重要灵感来源。</p>
+                        <p>三浦惠理对待表演非常认真，会为每个角色做大量准备工作，包括学习专业技能、体验生活等。这种敬业态度让她在行业内获得了良好的口碑，也赢得了许多影迷的喜爱。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 影迷社区互动 -->
+        <section class="section">
+            <div class="container">
+                <div class="fan-community">
+                    <div class="community-text">
+                        <h3>💬 加入影迷交流社区</h3>
+                        <p>与同样喜欢三浦惠理的朋友们一起讨论最新作品、分享观影感受，还有机会获得线下活动信息。</p>
+                    </div>
+                    <button class="community-btn" onclick="alert('感谢关注！社区功能建设中，敬请期待。')">进入社区</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 FAQ -->
+        <section class="section" id="faq">
+            <div class="container">
+                <h2 class="section-title">关于三浦惠理的常见问题</h2>
+                <div class="faq-box">
+                    <div class="faq-item">
+                        <div class="faq-question">Q：三浦惠理的代表作品有哪些？</div>
+                        <div class="faq-answer">她的代表作包括电视剧《东京塔之下》《静默的森林》，电影《光之记忆》《潮汐食堂》，以及舞台剧《夜光》等。早期晨间剧《太阳之舞》也让她获得了较高知名度。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Q：三浦惠理获得过哪些奖项？</div>
+                        <div class="faq-answer">她曾获得横滨电影节新人奖，并多次获得电视剧与电影相关的演技提名，如戏剧评论家奖最佳女配角提名。具体获奖信息以官方公布为准。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Q：三浦惠理是否有官方粉丝俱乐部？</div>
+                        <div class="faq-answer">目前暂无官方中文粉丝俱乐部，但可以通过其所属经纪公司官网获取最新消息。本站也会持续同步重要动态。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Q：如何关注三浦惠理的最新动态？</div>
+                        <div class="faq-answer">可以关注本站“最新动态”栏目，我们会定期更新日媒报道、剧集开播信息等。也可关注日本主流娱乐新闻网站。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Q：三浦惠理未来有什么新作品？</div>
+                        <div class="faq-answer">2025年春季日剧《约定的花》以及电影《潮汐食堂》已确定上映/播出，后续若有新企划，我们会第一时间整理发布。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>内容导航</h4>
+                    <ul>
+                        <li><a href="#news">最新动态</a></li>
+                        <li><a href="#works">影视作品</a></li>
+                        <li><a href="#career">演艺经历</a></li>
+                        <li><a href="#about">个人简介</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关网站</h4>
+                    <ul>
+                        <li><a href="#">日本影视资讯</a></li>
+                        <li><a href="#">日剧指南</a></li>
+                        <li><a href="#">独立电影推荐</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于本站</h4>
+                    <ul>
+                        <li><a href="#">网站介绍</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">版权声明</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>友情提示</h4>
+                    <p style="font-size:14px; color:#b8b0aa;">本站为影迷爱好者创建，非官方站点。所有资料仅供参考，请以官方信息为准。</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 三浦惠理中文资讯站 · 用心分享每一位好演员</p>
+            </div>
+        </div>
+    </footer>
+</body>
+      </html>
