@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>腐剧TV-热门腐剧推荐与在线观看指南</title>
+    <meta name="description" content="腐剧TV致力于为腐剧爱好者提供最新、最全的腐剧推荐、剧情介绍、演员资讯和在线观看指南。涵盖泰腐、日腐、韩腐、台腐等多地区腐剧，每日更新热门剧集榜单，打造专业的腐剧交流平台。">
+    <meta name="keywords" content="腐剧TV,腐剧推荐,泰腐剧,日腐剧,韩腐剧,BL剧,同性题材电视剧,腐剧在线观看,腐剧排行榜">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #fdf5f7 0%, #f8ecf0 50%, #fce9ee 100%);
+            color: #3d2b34;
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .site-header {
+            background: linear-gradient(135deg, #ff6b9d, #c44569);
+            padding: 18px 0;
+            box-shadow: 0 4px 15px rgba(196, 69, 105, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .logo span {
+            color: #ffeaa7;
+            font-weight: 400;
+            font-size: 14px;
+            display: block;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+        
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        
+        .main-nav li a {
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            display: block;
+        }
+        
+        .main-nav li a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+        
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: rgba(255,255,255,0.2);
+            border-radius: 25px;
+            padding: 5px 15px;
+        }
+        
+        .search-box input {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            padding: 8px 10px;
+            font-size: 14px;
+            width: 180px;
+        }
+        
+        .search-box input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .search-box button {
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 5px;
+        }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(196, 69, 105, 0.85), rgba(255, 107, 157, 0.85)), url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI1MCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwKSIvPjwvc3ZnPg==');
+            padding: 100px 0;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+        }
+        
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+            line-height: 2;
+        }
+        
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .badge {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            background: #fff;
+            color: #c44569;
+            padding: 14px 35px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        /* Sections */
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 20px;
+            color: #3d2b34;
+        }
+        
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 30px;
+            background: linear-gradient(to bottom, #ff6b9d, #c44569);
+            border-radius: 3px;
+        }
+        
+        .section-subtitle {
+            color: #8b6f7a;
+            margin-bottom: 30px;
+            font-size: 15px;
+        }
+        
+        /* Feature intro */
+        .feature-intro {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(196, 69, 105, 0.1);
+            margin-bottom: 40px;
+        }
+        
+        .feature-intro p {
+            text-indent: 2em;
+            margin-bottom: 15px;
+            color: #5a4a52;
+        }
+        
+        /* Drama cards */
+        .drama-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .drama-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #fce9ee;
+        }
+        
+        .drama-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(196, 69, 105, 0.15);
+        }
+        
+        .drama-poster {
+            height: 160px;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .drama-poster::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(transparent, rgba(0,0,0,0.3));
+        }
+        
+        .drama-poster .poster-emoji {
+            font-size: 48px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .drama-poster .region-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255,255,255,0.9);
+            color: #c44569;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 600;
+            z-index: 3;
+        }
+        
+        .drama-card:nth-child(2) .drama-poster {
+            background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+        }
+        
+        .drama-card:nth-child(3) .drama-poster {
+            background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+        }
+        
+        .drama-card:nth-child(4) .drama-poster {
+            background: linear-gradient(135deg, #84fab0, #8fd3f4);
+        }
+        
+        .drama-card:nth-child(5) .drama-poster {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+        }
+        
+        .drama-card:nth-child(6) .drama-poster {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+        }
+        
+        .drama-info {
+            padding: 20px;
+        }
+        
+        .drama-info h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #3d2b34;
+        }
+        
+        .drama-info .drama-meta {
+            font-size: 13px;
+            color: #8b6f7a;
+            margin-bottom: 10px;
+        }
+        
+        .drama-info .drama-desc {
+            font-size: 14px;
+            color: #6b5a62;
+            line-height: 1.6;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .drama-score {
+            display: inline-block;
+            background: #ffeaa7;
+            color: #c44569;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        /* Ranking list */
+        .ranking-wrapper {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(196, 69, 105, 0.08);
+        }
+        
+        .ranking-list {
+            list-style: none;
+        }
+        
+        .ranking-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #fce9ee;
+            transition: background 0.2s;
+            border-radius: 8px;
+        }
+        
+        .ranking-item:hover {
+            background: #fdf5f7;
+            padding-left: 10px;
+        }
+        
+        .ranking-number {
+            font-size: 20px;
+            font-weight: 800;
+            color: #c44569;
+            width: 40px;
+            text-align: center;
+        }
+        
+        .ranking-number.top {
+            color: #ff6b9d;
+            font-size: 24px;
+        }
+        
+        .ranking-title {
+            flex: 1;
+            font-weight: 500;
+        }
+        
+        .ranking-tag {
+            background: #fce9ee;
+            color: #c44569;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin-right: 10px;
+        }
+        
+        .ranking-hot {
+            color: #ff6b9d;
+            font-size: 14px;
+            font-weight: 600;
+            width: 80px;
+            text-align: right;
+        }
+        
+        /* Guide section */
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .guide-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+        }
+        
+        .guide-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(196, 69, 105, 0.12);
+        }
+        
+        .guide-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #c44569;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .guide-card p {
+            color: #6b5a62;
+            font-size: 14px;
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+        
+        .guide-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .guide-card ul li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #fce9ee;
+            color: #5a4a52;
+            font-size: 14px;
+        }
+        
+        .guide-card ul li:last-child {
+            border-bottom: none;
+        }
+        
+        /* FAQ */
+        .faq-section {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(196, 69, 105, 0.08);
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid #fce9ee;
+            padding: 20px 0;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        
+        .faq-question {
+            font-size: 18px;
+            font-weight: 600;
+            color: #3d2b34;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            color: #c44569;
+            font-weight: 400;
+        }
+        
+        .faq-answer {
+            padding-top: 12px;
+            color: #6b5a62;
+            font-size: 15px;
+            line-height: 1.8;
+            display: none;
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+        
+        /* Sidebar */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+        
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .sidebar-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+        }
+        
+        .sidebar-card h3 {
+            font-size: 18px;
+            color: #3d2b34;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #fce9ee;
+        }
+        
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .tag-cloud a {
+            background: #fdf5f7;
+            color: #c44569;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            border: 1px solid #fce9ee;
+        }
+        
+        .tag-cloud a:hover {
+            background: #c44569;
+            color: #fff;
+        }
+        
+        .notice-list {
+            list-style: none;
+        }
+        
+        .notice-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #fce9ee;
+            font-size: 14px;
+            color: #6b5a62;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .notice-list li::before {
+            content: '✦';
+            color: #ff6b9d;
+        }
+        
+        /* Footer */
+        .site-footer {
+            background: linear-gradient(135deg, #3d2b34, #2d1f28);
+            color: #d4c4ca;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-about h4 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links h4 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            padding: 5px 0;
+        }
+        
+        .footer-links a {
+            color: #d4c4ca;
+            font-size: 14px;
+        }
+        
+        .footer-links a:hover {
+            color: #ff6b9d;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 13px;
+            color: #a09098;
+        }
+        
+        /* CTA */
+        .cta-section {
+            background: linear-gradient(135deg, #ff6b9d, #c44569);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            color: #fff;
+            margin: 60px 0;
+        }
+        
+        .cta-section h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        
+        .cta-section p {
+            opacity: 0.9;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        @media (max-width: 992px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .search-box {
+                width: 100%;
+            }
+            
+            .search-box input {
+                flex: 1;
+                width: 100%;
+            }
+            
+            .main-nav {
+                width: 100%;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            
+            .main-nav ul {
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+            }
+            
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .hero h1 {
+                font-size: 28px;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+            
+            .drama-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            }
+            
+            .cta-section {
+                padding: 25px;
+            }
+            
+            .cta-section h2 {
+                font-size: 24px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .drama-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero p {
+                font-size: 15px;
+            }
+            
+            .ranking-item {
+                font-size: 14px;
+            }
+            
+            .ranking-hot {
+                width: auto;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="#" class="logo">腐剧TV<span>FUJUTV</span></a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">泰腐剧</a></li>
+                <li><a href="#">日腐剧</a></li>
+                <li><a href="#">韩腐剧</a></li>
+                <li><a href="#">台腐剧</a></li>
+                <li><a href="#">排行榜</a></li>
+                <li><a href="#">讨论区</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="搜索你想看的腐剧...">
+            <button aria-label="搜索">🔍</button>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>腐剧TV</h1>
+        <p>发现最精彩的腐剧世界，汇聚全球热门BL剧集。泰腐、日腐、韩腐、台腐一站掌握，带你领略每一段心动故事。</p>
+        <a href="#hot-dramas" class="btn-primary">🔥 立即探索热门腐剧</a>
+        <div class="hero-badges">
+            <span class="badge">📺 每日更新</span>
+            <span class="badge">⭐ 高分推荐</span>
+            <span class="badge">🌍 全球腐剧</span>
+            <span class="badge">💬 剧迷社区</span>
+        </div>
+    </div>
+</section>
+
+<main class="container">
+    <!-- 平台特色介绍 -->
+    <section class="feature-intro">
+        <h2 class="section-title">欢迎来到腐剧TV</h2>
+        <p>腐剧TV是专属于BL题材影视爱好者的内容聚合与推荐平台。我们深知每一位腐剧迷寻找优质剧集的辛苦，也理解大家追更时的期待与热情。因此，我们精心整理了来自泰国、日本、韩国、中国大陆、中国台湾以及其他国家和地区的优秀腐剧作品，为你提供一站式的剧集发现和指南服务。</p>
+        <p>无论你是刚刚接触腐剧的新观众，还是已经深陷其中的资深剧迷，这里都有适合你的内容推荐和观看建议。我们坚持客观、真实的推荐原则，不虚构评分和评价，所有内容均基于剧集的实际口碑和观众反馈整理而成。接下来，就让我们一起走进这个充满魅力的腐剧世界吧。</p>
+    </section>
+
+    <!-- 热门腐剧推荐 -->
+    <section id="hot-dramas" class="section">
+        <h2 class="section-title">近期热门腐剧</h2>
+        <p class="section-subtitle">根据剧迷讨论热度与平台数据整理的近期人气作品</p>
+        
+        <div class="drama-grid">
+            <article class="drama-card">
+                <div class="drama-poster">
+                    <span class="poster-emoji">🌺</span>
+                    <span class="region-tag">泰腐</span>
+                </div>
+                <div class="drama-info">
+                    <h3>爱的香气</h3>
+                    <div class="drama-meta">泰国 · 2024 · 共12集</div>
+                    <p class="drama-desc">讲述调香师与年轻医生之间因一段旧日记而展开的浪漫故事，画面唯美，情感细腻。</p>
+                    <span class="drama-score">🔥 讨论度极高</span>
+                </div>
+            </article>
+            
+            <article class="drama-card">
+                <div class="drama-poster">
+                    <span class="poster-emoji">🌸</span>
+                    <span class="region-tag">日腐</span>
+                </div>
+                <div class="drama-info">
+                    <h3>如果30岁还是处男</h3>
+                    <div class="drama-meta">日本 · 2024 · 共10集</div>
+                    <p class="drama-desc">改编自人气漫画，讲述30岁仍保持处男之身的主角突然获得读心能力后与同事之间的甜蜜互动。</p>
+                    <span class="drama-score">⭐ 口碑佳作</span>
+                </div>
+            </article>
+            
+            <article class="drama-card">
+                <div class="drama-poster">
+                    <span class="poster-emoji">💜</span>
+                    <span class="region-tag">韩腐</span>
+                </div>
+                <div class="drama-info">
+                    <h3>非故意恋爱故事</h3>
+                    <div class="drama-meta">韩国 · 2023 · 共10集</div>
+                    <p class="drama-desc">因意外而被迫同居的两个男人，在谎言与真实之间逐渐靠近，温暖治愈的恋爱故事。</p>
+                    <span class="drama-score">🔥 人气作品</span>
+                </div>
+            </article>
+            
+            <article class="drama-card">
+                <div class="drama-poster">
+                    <span class="poster-emoji">🌈</span>
+                    <span class="region-tag">泰腐</span>
+                </div>
+                <div class="drama-info">
+                    <h3>反之亦爱</h3>
+                    <div class="drama-meta">泰国 · 2023 · 共12集</div>
+                    <p class="drama-desc">一个失意的导演与一个神秘男子在平行世界中相遇，展开奇幻又治愈的旅程。</p>
+                    <span class="drama-score">⭐ 高分推荐</span>
+                </div>
+            </article>
+            
+            <article class="drama-card">
+                <div class="drama-poster">
+                    <span class="poster-emoji">✨</span>
+                    <span class="region-tag">台腐</span>
+                </div>
+                <div class="drama-info">
+                    <h3>近距离爱上你</h3>
+                    <div class="drama-meta">中国台湾 · 2021 · 共20集</div>
+                    <p class="drama-desc">讲述两对性格截然不同的情侣之间的爱情故事，轻松搞笑又动人。</p>
+                    <span class="drama-score">💛 经典之作</span>
+                </div>
+            </article>
+            
+            <article class="drama-card">
+                <div class="drama-poster">
+                    <span class="poster-emoji">🌊</span>
+                    <span class="region-tag">日腐</span>
+                </div>
+                <div class="drama-info">
+                    <h3>美丽的他</h3>
+                    <div class="drama-meta">日本 · 2021 · 共6集</div>
+                    <p class="drama-desc">寡言的高中生与渴望被关注的同学之间，一段关于自卑与爱恋的青春物语。</p>
+                    <span class="drama-score">⭐ 经典必看</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <div class="content-wrapper">
+        <div>
+            <!-- 腐剧分类指南 -->
+            <section class="section">
+                <h2 class="section-title">腐剧分类速览</h2>
+                <p class="section-subtitle">不同地区的腐剧有着截然不同的风格和叙事方式，了解各地区的特色有助于你更快找到心仪的作品</p>
+                
+                <div class="guide-grid">
+                    <div class="guide-card">
+                        <h3>🇹🇭 泰腐剧</h3>
+                        <p>泰国腐剧发展最为成熟，产量高、题材丰富。从校园纯爱到职场成人，从轻松喜剧到虐心剧情，几乎涵盖了所有类型。泰腐以其大胆直球的情感表达和青春洋溢的演员阵容著称。</p>
+                        <ul>
+                            <li>推荐入门：《一年生》《待到重逢时》</li>
+                            <li>高口碑：《以你的心诠释我的爱》</li>
+                            <li>近年热门：《反之亦爱》《爱的香气》</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="guide-card">
+                        <h3>🇯🇵 日腐剧</h3>
+                        <p>日腐剧通常篇幅较短，注重人物内心刻画和细腻的情感表达。很多作品改编自优秀的BL漫画或小说，保留了原作扎实的故事基础，影像风格清新自然。</p>
+                        <ul>
+                            <li>推荐入门：《如果30岁还是处男》</li>
+                            <li>经典必看：《美丽的他》《消失的初恋》</li>
+                            <li>文艺向：《到了30岁还是处男，似乎会变成魔法师》</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="guide-card">
+                        <h3>🇰🇷 韩腐剧</h3>
+                        <p>韩腐剧近年发展迅速，虽然单集时长较短，但制作精良，画面质感出众。韩腐擅长在有限篇幅内构建完整的故事线，情感表达细腻且克制。</p>
+                        <ul>
+                            <li>推荐入门：《语义错误》《冬日后的樱花》</li>
+                            <li>人气作品：《非故意恋爱故事》</li>
+                            <li>新作期待：《我们的模拟恋爱》</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="guide-card">
+                        <h3>🇨🇳 华语腐剧</h3>
+                        <p>包括中国大陆的网络剧、中国台湾和中国香港地区的作品。受不同文化环境影响，华语腐剧风格多样，台湾作品往往大胆开放，大陆则更多采用含蓄的表达方式。</p>
+                        <ul>
+                            <li>台腐经典：《近距离爱上你》《永远的第一名》</li>
+                            <li>港腐探索：《大叔的爱》香港版</li>
+                            <li>大陆网络剧：《陈情令》（兄弟情向）</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 腐剧观看指南 -->
+            <section class="section">
+                <h2 class="section-title">腐剧观看指南</h2>
+                <p class="section-subtitle">新手入门必读，帮你快速找到适合自己的腐剧</p>
+                
+                <div class="faq-section">
+                    <div class="faq-item">
+                        <div class="faq-question">第一次看腐剧，应该从哪部作品开始？</div>
+                        <div class="faq-answer">
+                            如果你是第一次接触腐剧，建议从轻松甜蜜、剧情简单的作品入手。泰剧《一年生》是很多人的入坑之作，节奏明快、情感自然；日剧《消失的初恋》轻松搞笑，没有太多虐心元素；韩剧《语义错误》制作精良，故事紧凑，也是很好的入门选择。先选择自己熟悉的地区和文化背景的作品，接受度会更高。
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">泰腐剧和日腐剧有什么明显区别？</div>
+                        <div class="faq-answer">
+                            泰腐剧通常集数较多（10-12集），节奏明快，情感表达直接热烈，演员互动大胆自然，经常会有较多的亲密场景。日腐剧则普遍较短（6-8集），讲究留白和克制，注重眼神和细节的表演，情感表达更加含蓄内敛。两者各有魅力，主要取决于你偏好热烈的爱情还是细腻的暗恋。
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">在哪里可以看到这些腐剧？</div>
+                        <div class="faq-answer">
+                            正版观看渠道因地区和剧集而异。泰腐剧通常可在泰国电视台的官方频道或国际流媒体平台如iQIYI国际版、Viu等观看。日腐剧多在日本电视台播出后在各大平台上线。韩腐剧常通过韩国的流媒体平台如Watcha、Wavve播出。国内观众可以关注各大视频网站的引进情况，部分剧集在B站、腾讯视频等平台有正版引进。建议通过正规渠道观看，支持正版内容创作。
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">有哪些经典腐剧值得反复观看？</div>
+                        <div class="faq-answer">
+                            经典作品往往经得起时间考验。泰剧《以你的心诠释我的爱》被许多剧迷誉为泰腐天花板之作，无论制作水准还是演员表演都堪称一流。日剧《美丽的他》以独特的镜头语言和深刻的情感刻画赢得广泛好评。韩剧《语义错误》改变了很多人对韩腐的认知。台剧《永远的第一名》和《第二名的逆袭》也以成熟的制作成为华语腐剧的代表作。这些作品都值得一看再看。
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 侧边栏 -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3>🏆 本周人气榜</h3>
+                <ol class="ranking-list">
+                    <li class="ranking-item">
+                        <span class="ranking-number top">1</span>
+                        <span class="ranking-title">爱的香气</span>
+                        <span class="ranking-tag">泰腐</span>
+                        <span class="ranking-hot">🔥 2.8万</span>
+                    </li>
+                    <li class="ranking-item">
+                        <span class="ranking-number top">2</span>
+                        <span class="ranking-title">非故意恋爱故事</span>
+                        <span class="ranking-tag">韩腐</span>
+                        <span class="ranking-hot">🔥 2.1万</span>
+                    </li>
+                    <li class="ranking-item">
+                        <span class="ranking-number top">3</span>
+                        <span class="ranking-title">如果30岁还是处男</span>
+                        <span class="ranking-tag">日腐</span>
+                        <span class="ranking-hot">🔥 1.9万</span>
+                    </li>
+                    <li class="ranking-item">
+                        <span class="ranking-number">4</span>
+                        <span class="ranking-title">反之亦爱</span>
+                        <span class="ranking-tag">泰腐</span>
+                        <span class="ranking-hot">🔥 1.5万</span>
+                    </li>
+                    <li class="ranking-item">
+                        <span class="ranking-number">5</span>
+                        <span class="ranking-title">美丽的他</span>
+                        <span class="ranking-tag">日腐</span>
+                        <span class="ranking-hot">🔥 1.2万</span>
+                    </li>
+                </ol>
+            </div>
+            
+            <div class="sidebar-card">
+                <h3>🏷️ 热门标签</h3>
+                <div class="tag-cloud">
+                    <a href="#">校园</a>
+                    <a href="#">职场</a>
+                    <a href="#">治愈</a>
+                    <a href="#">虐心</a>
+                    <a href="#">轻松喜剧</a>
+                    <a href="#">悬疑</a>
+                    <a href="#">同居</a>
+                    <a href="#">先婚后爱</a>
+                    <a href="#">破镜重圆</a>
+                    <a href="#">暗恋</a>
+                    <a href="#">双向奔赴</a>
+                    <a href="#">年下</a>
+                </div>
+            </div>
+            
+            <div class="sidebar-card">
+                <h3>📢 平台动态</h3>
+                <ul class="notice-list">
+                    <li>腐剧TV讨论区全新上线</li>
+                    <li>2024年度腐剧盘点即将发布</li>
+                    <li>新剧《冬日恋歌》预告片释出</li>
+                    <li>热门泰腐演员专访内容筹备中</li>
+                    <li>剧迷投稿功能开放，欢迎分享</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- 观剧小贴士 -->
+    <section class="section">
+        <h2 class="section-title">观剧小贴士</h2>
+        
+        <div class="guide-grid">
+            <div class="guide-card">
+                <h3>💡 如何选择适合自己的腐剧</h3>
+                <p>每个人的口味不同，选择腐剧时可以从几个维度考虑：地区风格（泰腐热烈、日腐细腻、韩腐精致）、剧情类型（校园青春、职场成人、古装奇幻）、情感基调（轻松甜蜜、虐心催泪、治愈温暖）。如果你喜欢快节奏和直接表达，泰腐剧会比较合适；如果你偏爱含蓄细腻的情感变化，日腐剧可能更对你的胃口。</p>
+            </div>
+            
+            <div class="guide-card">
+                <h3>🔍 了解剧集背景信息</h3>
+                <p>很多腐剧改编自热门BL小说或漫画，了解原作背景可以帮助你更好地理解剧情走向和人物关系。同时，关注剧集导演和演员的过往作品也能辅助判断这部剧是否符合你的喜好。在腐剧TV，我们为每部剧集都整理了详细的背景资料和演员信息。</p>
+            </div>
+            
+            <div class="guide-card">
+                <h3>💬 加入剧迷社区交流</h3>
+                <p>看剧之余，和其他剧迷交流讨论也是一大乐趣。你可以在我们的讨论区分享观剧感受、推荐冷门佳作、参与话题讨论。不过请记住，每个人都有自己独特的喜好，尊重不同的观点和审美，共同维护友好和谐的交流氛围。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>开启你的腐剧之旅</h2>
+        <p>海量腐剧推荐、最新剧集资讯、精彩剧评讨论，一切尽在腐剧TV。马上加入我们，发现属于你的心动故事！</p>
+        <a href="#" class="btn-primary">🚀 立即加入腐剧TV</a>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-about">
+                <h4>关于腐剧TV</h4>
+                <p style="font-size: 14px; line-height: 1.8;">腐剧TV是一个专注于BL题材影视剧集推荐与资讯分享的爱好者平台。我们致力于为腐剧迷提供客观、丰富、有价值的剧集信息和交流空间。所有内容均基于公开信息和观众反馈整理，不代表任何官方立场。</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">最新更新</a></li>
+                    <li><a href="#">高分榜单</a></li>
+                    <li><a href="#">泰腐专区</a></li>
+                    <li><a href="#">日腐专区</a></li>
+                    <li><a href="#">韩腐专区</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>帮助支持</h4>
+                <ul>
+                    <li><a href="#">使用指南</a></li>
+                    <li><a href="#">剧集投稿</a></li>
+                    <li><a href="#">版权声明</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2024 腐剧TV FUJUTV.COM 保留所有权利 | 本平台仅提供影视资讯与推荐，不提供任何盗版资源</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // FAQ交互
+    document.querySelectorAll('.faq-question').forEach(item => {
+        item.addEventListener('click', function() {
+            const parent = this.parentElement;
+            parent.classList.toggle('active');
+        });
+    });
+</script>
+
+</body>
+  </html>
